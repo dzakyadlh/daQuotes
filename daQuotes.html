@@ -2,11 +2,6 @@
 <html>
   <head>
     <title>daQuotes</title>
-    <script
-      src="https://code.jquery.com/jquery-3.7.0.js"
-      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
-      crossorigin="anonymous"
-    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,33 +15,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <script>
-      $(document).ready(function () {
-        const colorInit = getRandomColor();
-        $("body").css("background-color", colorInit);
-        $("#text").css("color", colorInit);
-        $("#author").css("color", colorInit);
-        $("#tweet-quote").css("color", colorInit);
-        $("#new-quote").css("background-color", colorInit);
-        $("#new-quote").click(function () {
-          var newColor = getRandomColor();
-          $("body").css("background-color", newColor);
-          $("#text").css("color", newColor);
-          $("#author").css("color", newColor);
-          $("#tweet-quote").css("color", newColor);
-          $("#new-quote").css("background-color", newColor);
-        });
-      });
-    </script>
     <div id="main-container">
       <div id="quote-box">
-        <div id="quote-text"><h1 id="text">I dont know</h1></div>
-        <div id="quote-author"><p id="author">~alaladong</p></div>
+        <div id="quote-text"><h1 id="text"></h1></div>
+        <div id="quote-author">
+          <p id="author"></p>
+        </div>
         <div id="quote-btn">
           <a id="tweet-quote" href="twitter.com/intent/tweet" target="_blank"
             ><i class="fa-brands fa-square-twitter"></i
           ></a>
-          <button id="new-quote">New Quote</button>
+          <button id="new-quote" onclick="newQuote()">New Quote</button>
         </div>
       </div>
     </div>

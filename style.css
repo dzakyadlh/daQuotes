@@ -24,20 +24,21 @@ body {
   justify-content: center;
   padding: 20px;
   width: 40vw;
+  max-width: 80vw;
   max-height: 70vh;
   box-shadow: 0 0 5px #000000;
   border-radius: 5px;
+  transition: 0.5s;
 }
 
 #quote-text {
   height: 80%;
   width: 100%;
-  border: 1px solid red;
 }
 
 #text {
-  font-size: 2em;
-  text-align: center;
+  font-size: 1.5em;
+  transition: 0.5s;
 }
 
 #quote-author {
@@ -45,13 +46,13 @@ body {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  border: 1px solid red;
 }
 
 #author {
-  font-size: 1em;
+  font-size: 0.8em;
   font-style: italic;
   margin: 0 0 10px;
+  transition: 0.5s;
 }
 
 #quote-btn {
@@ -60,11 +61,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid red;
 }
 
 #tweet-quote i {
   font-size: 2em;
+  transition: 0.5s;
 }
 
 #new-quote {
@@ -72,4 +73,19 @@ body {
   padding: 10px 10px;
   border: none;
   font-size: 0.8em;
+  transition: 0.5s;
+}
+
+@media (max-width: 767px) {
+  #quote-box {
+    width: 80vw;
+  }
+  #text {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #quote-box {
+    width: 70vw;
+  }
 }/*# sourceMappingURL=style.css.map */
